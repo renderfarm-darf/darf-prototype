@@ -1,8 +1,7 @@
 # DARF – Distributed Android Render Farm
 
-DARF is an experimental render farm framework built around native Android devices. It’s designed to turn recycled or dedicated Android phones and tablets into distributed render nodes—optimized for offline use but capable of leveraging cloud storage for input or output handling when available. No emulation layers, no virtual machines.
+DARF is a conceptual framework in active development. It invites developers to shape a native, distributed rendering system for Android from the ground up—exploring hardware-level orchestration across mobile devices, offline or in the cloud.
 
-This is not a finished tool—it’s a proof of concept and an open invitation for developers to explore offline, hardware-level rendering orchestration across mobile devices.
 
 ## ⚙️ Core Concept
 
