@@ -1,7 +1,5 @@
 # DARF Architecture Notes
 
-# DARF Architecture
-
 > *“A distributed render farm for the everyday artist, not the data center.”*
 
 ## 🔧 Core Components
