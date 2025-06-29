@@ -39,12 +39,11 @@ DARF is renderer-agnostic: it simply executes jobs passed to it by a host-side d
 
 ## 🧪 Experimental Features
 
-- Adaptive load balancing across heterogeneous Android nodes
-- Offline-first mesh coordination (no central server)
-- Thermal/power-aware task scheduling
-- Minimalist dashboard or CLI monitor for task status
-- Encrypted asset transfer and result return
-
+- Adaptive load balancing across mixed Android hardware  
+- Offline-first mesh coordination with no central server  
+- Thermal- and power-aware task scheduling  
+- Minimalist dashboard or CLI tool for real-time task tracking  
+- Encrypted asset transfer and secure result return
 ---
 
 ## 🧭 Future Expansion
