@@ -46,14 +46,12 @@ DARF welcomes thoughtful, curious developers who want to:
 We encourage forks, discussions, and pull requests.  
 See [CONTRIBUTING.md](./verified-scenes/CONTRIBUTING.md) and join the conversation under GitHub Discussions.
 
-## 🧪 Who It’s For
-
+## 🧪 Who It’s For  
 DARF isn’t for end users—not yet.
 
-This is for **developers**, **pipeline designers**, and **creative technologists** who aren’t afraid to poke the edges of what render workflows could become.
+This is for developers, students, hobbyists, pipeline designers, and creative technologists who aren’t afraid to poke the edges of what render workflows could become.
 
 If that’s you, welcome in.
-
 ## 📜 License
 
 This project is licensed under the [GNU General Public License v3.0](./LICENSE).  
