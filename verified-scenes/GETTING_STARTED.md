@@ -4,4 +4,4 @@ DARF is in early development and evolving rapidly, but here’s how to explore w
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/darf.git
+   git clone https://github.com/renderfarm-darf/darf.git
