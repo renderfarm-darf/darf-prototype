@@ -1,110 +1,141 @@
-# 📍 DARF Roadmap
+# DARF Roadmap v1.6
 
-DARF (Distributed Android Render Farm) is a native Android-first framework concept for distributed rendering using mobile devices. This roadmap outlines current development goals, planned integrations, phased technical implementation, and long-term expansion—including a future iOS sibling, DIRF.
+_Last updated: June 29, 2025_
 
----
-
-## ✅ Current Status
-
-- Public GitHub repository with documentation and early prototype scaffolding  
-- Native Android render node concept (no Linux emulation or cloud reliance)  
-- Renderer-agnostic architecture in place for CLI-based tools  
-- Public-facing mission centered on experimentation and developer collaboration
+DARF (Distributed Android Render Farm) is a modular, headless-rendering ecosystem where Android devices act as individual frame processors coordinated by a centralized controller. This roadmap defines feature phases, boundaries, and future growth without overcommitting early.
 
 ---
 
-## 🔧 Initial Integration Targets (PC-Side Apps)
+## 📐 Phase 1: Controller Architecture & Payload Definition
 
-DARF is designed to accept render jobs from desktop applications via CLI or scriptable export mechanisms. Current and planned integrations include:
+> **No Android devices. No rendering. No simulation. Only structure.**
 
-- **Blender** – initial proof-of-concept  
-- **FFmpeg** – for transcoding, compositing, and batch video processing  
-- **After Effects** – via render queue export workflows  
-- **DaVinci Resolve** – through scriptable job export  
-- **Cinema 4D / Maya** – long-term targets, contingent on CLI-accessible job export  
+### Scope
+- Build **Controller Interface** (UI + core logic):
+  - Import & inspect frame sequences
+  - Define and export `render_payload.json` with correct schema
+  - Display job queue, frame metadata, task breakdown
+- Output analyzed payloads to filesystem (for validation only)
+- Define protocols and constraints:
+  - Payload lifecycle
+  - Node eligibility policies
+  - Optimization enforcement structure
+- Begin documentation:
+  - `DISPATCH_POLICY.md`
+  - `INSTALL_POLICY.md`
+  - `OPTIMIZATION_BLOCKERS.md`
+  - `NODE_BEHAVIOR.md`
+  - `RENDER_PAYLOAD_SPEC.md`
 
-DARF is renderer-agnostic: it simply executes jobs passed to it by a host-side dispatcher.
+### Out-of-Scope
+- ❌ No Android connectivity  
+- ❌ No rendering or simulation  
+- ❌ No device handshake  
+- ✅ All testing is structural, file-based, and static
 
 ---
 
-## 🔜 Near-Term Goals
+## 🚦 Phase 2: Android Node Activation & Basic Dispatch
 
-- Define a minimal task packet format (input paths, output targets, render commands)  
-- Build a CLI tool or Python wrapper to batch Blender frame jobs  
-- Develop Android node app to accept tasks, validate input, execute renders, and return results  
-- Implement host-side dispatcher to coordinate jobs across multiple Android devices  
-- Add basic retry logic and asset caching for incomplete or interrupted jobs  
-- Enable GitHub Discussions to invite feedback and community contributions  
+> **Rendering begins. Android renderer boots as headless daemon.**
+
+- Controller begins node pairing & payload dispatch
+- Android renderer receives parsed frame-layer tasks:
+  - Starts on boot
+  - No user interface
+  - Processes payload, logs output
+- Basic frame return & status tracking  
+- Enforced per-device hardcoded pause (`pause_after_first_frame_ms`)  
+- No retry logic yet—failures are logged only
 
 ---
 
-## 🚦 Phased Development Plan
+## 🔁 Phase 3: Mesh Coordination & Recovery
 
-DARF is staging, not sprinting. Each phase validates its part of the pipeline before handing off to the next. No guesswork. No partial builds. Just deterministic progress.
+> **DARF becomes aware of its mesh. And guards it.**
 
-### 🔹 Phase 1 – Scene Validation & Job Packet Generation
-🕒 5–7 weeks
-“Parse only. Render nothing. Trust what's complete.”
-- .blend-only scene ingestion
-- Strict validation: camera, frame range, baked sims, compatible shaders
-- Rejects invalid files silently—no patching or partials
-- Outputs structured job packets, one per frame/pass
-- No image generation or rendering—just clean packet prep
+- Node states: idle, rendering, unresponsive, overheated
+- Re-queue logic for failed or missed render tasks
+- Log synchronization from Android → Controller
+- Begin profiling render duration for each node
+- Establish `NODE_STATE.md` + `FAILOVER.md`
 
-### 🔸 Phase 2 – Render Stub & Mesh Parser Interface
-🕒 4–6 weeks
-“Begin listening. Don’t draw. Confirm understanding.”
-- Android (or desktop) devices receive job packets and simulate execution
-- Create placeholder outputs (e.g. frame_0123_alpha.png)
-- Log all inputs and track task flow through mesh simulation
-- Benchmark "empty render" I/O and validate routing logic
-- Phase 3 scoped during this window based on packet behavior
+🔓 *After Phase 3: Controlled alpha testing for trusted users begins.*
 
-### 🔺 Phase 3 – Native Android Renderer (Alpha)
-🕒 TBD – scoped after Phase 2 validation
-“Now that I understand the jobs—let me draw one.”
-- Begins with alpha or Z-depth image output (low complexity)
-- Renderer receives validated packets and sandboxed job assets
-- Focus on frame-specific loading, isolated rendering, and stable output
+---
 
-### 🧱 Phase 4 – Render Mesh Stability & Packaging
-🕒 6+ weeks post-Phase 3
-- Improve render output (color channels, composite passes)
-- Expand support across Android versions and hardware types
-- Add output packaging, retry/caching support, and asset bundling
-- Begin recruiting early testers for limited release
+## 🔧 Phase 4: Enforcement & Runtime Policies
 
-### 🧮 Timeline Summary
+> **Now the system defends itself.**
 
-| Phase   | Purpose                                 | Timeline      |
-|---------|-----------------------------------------|---------------|
-| Phase 1 | Scene ingestion + job packet generation | ~6 weeks      |
-| Phase 2 | Simulated render + routing validation   | ~6 weeks      |
-| Phase 3 | First real renders from real jobs       | ~6+ weeks     |
-| Phase 4 | Output stability + test node support    | ~6 weeks      |
-| Buffer  | Triage + integration & onboarding       | ~1–2 weeks    |
+- Controller enforces optimization tier at payload level
+- Android devices:
+  - Detect SIM activity (deny install on in-use phones)
+  - Lock brightness, kill background tasks (in `Dedicated` mode)
+  - Boot directly into renderer—no launcher icon
+- Finalize:
+  - `ELIGIBILITY_POLICY.md`
+  - `DEDICATED_MODE.md`
 
-🎯 **Target: Week 26 – Invite a small test mesh of collaborators with stable packet routing and first-stage output.**
+---
 
-### 🧪 Experimental Features
-- Adaptive load balancing across mixed Android hardware
-- Offline-first mesh coordination with no central server
-- Thermal- and power-aware task scheduling
-- Minimalist dashboard or CLI tool for real-time task tracking
-- Encrypted asset transfer and secure result return
+## 🖼️ Phase 5: 2D Layer Support & Compositing Passes
 
-### 🧭 Future Expansion
-DIRF – Distributed iOS Render Farm
-- Native Swift implementation inspired by the DARF architecture
-- No code porting—clean, iOS-native builds encouraged
-- Shared task structure and communication protocol with DARF
-PC App Integration Kits
-- Tools and scripts to export DARF-ready jobs from supported desktop apps
-- Blender integration first, then expansion to FFmpeg, AE, Resolve, and others
-DARF-Control
-- Optional lightweight dashboard (desktop or mobile)
-- Local-first, offline-capable task monitoring and coordination interface
+- Accept 2D-oriented `render_payload.json` from:
+  - Krita
+  - Toon Boom
+  - AE / Blender image sequences
+- Android node performs post-layer operations:
+  - Filtering
+  - Compositing
+  - Tone mapping
+- Payload schema extended to identify render type
 
-🚫 Not Planned (By Design)
-- Cross-platform emulation or abstraction layers
-- Full-featured GUI pipelines aimed at end users
+---
+
+## ⚛️ Phase 6: Advanced Scheduling & Scatter Policy
+
+- Dynamic task distribution:
+  - Thermal-aware
+  - Round-robin
+  - Flagship bias
+- Begin optional `CoreSplit`: intra-frame parallelism on multi-core nodes
+- Per-node render history and cooldown modeling
+- Docs:
+  - `SCATTER_POLICY.md`
+  - `CORE_SPLIT.md`
+
+---
+
+## 🛰️ Phase 7+: Long-Horizon Features
+
+| Feature | Status |
+|--------|--------|
+| Gold Mesh Tier (cluster profiling) | Drafting |
+| Multi-frame queueing per flagship node | Concept |
+| `DARF Calc`: ROI vs cloud renderer estimator | In discussion |
+| Cloud spillover mode (hybrid dispatch) | Frozen |
+| Contributor manifest + philosophy docs | Writing |
+
+---
+
+## 📌 Notes
+
+- ⚙️ **Controller thermal_independent = true** — it doesn’t throttle; it dispatches  
+- ✅ **If you can run Blender, you can run DARF**  
+- 🤝 Public alpha testing opens only *after Phase 3* completion  
+- 💾 Android renderer target footprint: **<12 MB**, with RAM peak ~400 MB per task  
+- 🔒 Thermal limits and device eligibility are hard rules—not toggles  
+
+---
+
+## 📁 Suggested Docs Folder Layout
+
+```plaintext
+/docs
+  ├── ROADMAP.md
+  ├── DISPATCH_POLICY.md
+  ├── RENDER_PAYLOAD_SPEC.md
+  ├── NODE_BEHAVIOR.md
+  ├── INSTALL_POLICY.md
+  ├──
