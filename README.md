@@ -57,7 +57,8 @@ If that’s you, welcome in.
 
 ## 📜 License
 
-MIT License. Use it, remix it, build something cooler from it.
+This project is licensed under the [GNU General Public License v3.0](./LICENSE).  
+Use it, modify it, share it—just keep it open.
 
 ---
 
