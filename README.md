@@ -45,7 +45,7 @@ DARF is open to thoughtful, curious developers who want to:
 - Reclaim old hardware for creative pipelines
 - Extend or adapt the task runners for specific tools
 
-We encourage forks, discussions, and PRs. See [CONTRIBUTING.md](./CONTRIBUTING.md) and join the conversation under GitHub Discussions.
+We encourage forks, discussions, and PRs. See [CONTRIBUTING.md](./verified-scenes/CONTRIBUTING.md) and join the conversation under GitHub Discussions.
 
 ## 🧪 Who It’s For
 
