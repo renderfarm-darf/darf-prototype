@@ -37,13 +37,14 @@ See the full [ROADMAP.md](./ROADMAP.md) for details, but here's a quick glimpse:
 
 ## 🤝 Contributing
 
-DARF is open to thoughtful, curious developers who want to:
+DARF welcomes thoughtful, curious developers who want to:
 
-- Experiment with render pipelines outside the cloud
-- Reclaim old hardware for creative pipelines
-- Extend or adapt the task runners for specific tools
+- Experiment with render pipelines beyond the cloud  
+- Reclaim old Android hardware for creative workflows  
+- Extend or adapt task runners for specific tools and environments
 
-We encourage forks, discussions, and PRs. See [CONTRIBUTING.md](./verified-scenes/CONTRIBUTING.md) and join the conversation under GitHub Discussions.
+We encourage forks, discussions, and pull requests.  
+See [CONTRIBUTING.md](./verified-scenes/CONTRIBUTING.md) and join the conversation under GitHub Discussions.
 
 ## 🧪 Who It’s For
 
