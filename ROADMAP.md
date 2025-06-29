@@ -48,22 +48,18 @@ DARF is renderer-agnostic: it simply executes jobs passed to it by a host-side d
 
 ## 🧭 Future Expansion
 
-### DIRF – Distributed iOS Render Farm
+**DIRF – Distributed iOS Render Farm**  
+- Native Swift implementation inspired by the DARF architecture  
+- No code porting—clean, iOS-native builds encouraged  
+- Shared task structure and communication protocol with DARF  
 
-- Native Swift implementation based on DARF architecture
-- No code porting—fresh iOS-native build encouraged
-- Shared task structure and protocol logic
+**PC App Integration Kits**  
+- Tools and scripts to export DARF-ready jobs from supported desktop apps  
+- Blender integration first, then expansion to FFmpeg, AE, Resolve, and others  
 
-### PC App Integration Kits
-
-- Tools or scripts to help users export DARF-ready jobs from supported apps
-- Blender first, then generalizing to other platforms
-
-### DARF-Control
-
-- Optional lightweight dashboard (desktop or mobile)
-- Local-first, offline-capable monitoring and control interface
-
+**DARF-Control**  
+- Optional lightweight dashboard (desktop or mobile)  
+- Local-first, offline-capable task monitoring and coordination interface
 ---
 
 ## 🚫 Not Planned (By Design)
