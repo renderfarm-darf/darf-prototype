@@ -43,7 +43,8 @@ DARF welcomes thoughtful, curious developers who want to:
 - Reclaim old Android hardware for creative workflows  
 - Extend or adapt task runners for specific tools and environments
 
-We encourage forks, discussions, and pull requests.  
+We encourage forks, discussions, and pull requests.
+
 See [CONTRIBUTING.md](./verified-scenes/CONTRIBUTING.md) and join the conversation under GitHub Discussions.
 
 ## 🧪 Who It’s For  
