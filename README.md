@@ -22,19 +22,18 @@ Key priorities:
 - Prototype task dispatcher for Windows/macOS/Linux
 - Develop lightweight Android-side agent to execute jobs and return output
 
-## 🔭 Roadmap Highlights
+## 🔭 Roadmap Highlights  
+See the full ROADMAP.md for details, but here's a quick glimpse:
 
-See the full [ROADMAP.md](./ROADMAP.md) for details, but here's a quick glimpse:
-
-- 👷 Task queue dispatch system (PC → Android nodes)
-- 🔄 Support for batch render jobs from:
-  - Blender (current)
-  - FFmpeg (up next)
-  - After Effects / Resolve / C4D (planned)
-- 💾 Optional asset caching and job retry logic
-- 📊 Basic task dashboard or command-line monitoring
-- 🔐 Encrypted task transport for sensitive content
-- 📱 Expansion to **DIRF** (Distributed iOS Render Farm) as a native Swift sibling project (no code porting—fresh builds only)
+👷 PC-driven task queue system (dispatch → Android nodes)  
+🔄 Batch render support from:  
+• Blender (active)  
+• FFmpeg (in queue)  
+• After Effects / Resolve / C4D (planned)  
+💾 Asset caching and retry logic (offline-friendly, cloud-optional)  
+📊 Basic dashboard or CLI tool for task monitoring  
+🔐 Encrypted asset transport for secure job delivery  
+📱 DIRF expansion (Distributed iOS Render Farm) as a native Swift sibling—no porting, all new build
 
 ## 🤝 Contributing
 
