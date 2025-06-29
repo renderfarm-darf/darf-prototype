@@ -1,38 +1,64 @@
 # DARF – Distributed Android Render Farm
 
-**DARF is for creators. Built by necessity, shared by design.**
+DARF is an experimental render farm framework built entirely around **native Android devices**. It’s designed to turn recycled or dedicated Android phones and tablets into distributed render nodes—with zero reliance on cloud services or emulation layers.
 
-DARF is a render-node prototype that distributes animation tasks across recycled Android phones.  
-While the initial prototype uses Blender CLI for testing, the architecture is renderer-agnostic—designed to support any command-line-capable animation, video, or compositing tool.
+This is not a finished tool—it’s a proof of concept and an open invitation for developers to explore offline, hardware-level rendering orchestration across mobile devices.
 
-## Why DARF?
+## ⚙️ Core Concept
 
-To empower indie creators, students, and hobbyists who need render power but don’t have a studio budget.  
-DARF exists to prove that with a handful of mobile devices and a bit of coordination, anyone can build a distributed render system from scratch.
+DARF is:
 
-DARF isn't limited to Blender—it’s built to eventually support **any offline rendering workflow** that can run on older Android devices. From 3D to 2D, animation to compositing, DARF aims to make distributed rendering accessible for creators across all mediums and tools.
+- 📱 **Android-first and native** – no Linux layers, no VMs
+- 🖥️ **PC-coordinated** – tasks originate from desktop apps
+- 🛠️ **Renderer-agnostic** – task runners can invoke any CLI-based renderer (e.g., Blender, FFmpeg)
+- 🔌 **Network-agnostic** – built to work offline, across LAN or USB tethered devices
 
-## Current Status
+## 🚧 Current Focus
 
-- Single-node testing on Android devices  
-- Blender CLI rendering confirmed  
-- Repository initialized with open-source license (GPLv3)  
-- README and documentation scaffolding in progress
+We’re beginning with integration around **Blender CLI rendering**, using Python scripts to prepare frame-based render jobs and dispatch them to Android nodes via DARF.
 
-## Planned Features
+Key priorities:
 
-- Multi-node orchestration with device discovery  
-- Render queue management and result syncing  
-- Support for additional engines (FFmpeg, OpenToonz, Krita, Natron)  
-- Web-based dashboard (future stretch goal)
+- Define minimal task packet format (scene files, frame ranges, render commands)
+- Prototype task dispatcher for Windows/macOS/Linux
+- Develop lightweight Android-side agent to execute jobs and return output
 
-## Blender Demo Files
+## 🔭 Roadmap Highlights
 
-This project references official Blender demo files for benchmarking and educational use.  
-Access them directly here: [https://www.blender.org/download/demo-files/](https://www.blender.org/download/demo-files/)
+See the full [ROADMAP.md](./ROADMAP.md) for details, but here's a quick glimpse:
 
-All rights and licenses remain with the original creators. Files are typically shared under Creative Commons licenses (CC0, CC-BY, CC-BY-SA).
+- 👷 Task queue dispatch system (PC → Android nodes)
+- 🔄 Support for batch render jobs from:
+  - Blender (current)
+  - FFmpeg (up next)
+  - After Effects / Resolve / C4D (planned)
+- 💾 Optional asset caching and job retry logic
+- 📊 Basic task dashboard or command-line monitoring
+- 🔐 Encrypted task transport for sensitive content
+- 📱 Expansion to **DIRF** (Distributed iOS Render Farm) as a native Swift sibling project (no code porting—fresh builds only)
 
-## License
+## 🤝 Contributing
 
-DARF is licensed under the GNU General Public License v3.0 – open, forever.
+DARF is open to thoughtful, curious developers who want to:
+
+- Experiment with render pipelines outside the cloud
+- Reclaim old hardware for creative pipelines
+- Extend or adapt the task runners for specific tools
+
+We encourage forks, discussions, and PRs. See [CONTRIBUTING.md](./CONTRIBUTING.md) and join the conversation under GitHub Discussions.
+
+## 🧪 Who It’s For
+
+DARF isn’t for end users—not yet.
+
+This is for **developers**, **pipeline designers**, and **creative technologists** who aren’t afraid to poke the edges of what render workflows could become.
+
+If that’s you, welcome in.
+
+## 📜 License
+
+MIT License. Use it, remix it, build something cooler from it.
+
+---
+
+**Made by weird people with old phones and wild render dreams.**
