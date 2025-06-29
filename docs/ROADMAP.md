@@ -50,3 +50,61 @@ DARF is staging, not sprinting. Each phase validates its part of the pipeline be
 - Rejects invalid files silently—no patching or partials
 - Outputs structured job packets, one per frame/pass
 - No image generation or rendering—just clean packet prep
+
+### 🔸 Phase 2 – Render Stub & Mesh Parser Interface
+🕒 4–6 weeks
+“Begin listening. Don’t draw. Confirm understanding.”
+- Android (or desktop) devices receive job packets and simulate execution
+- Create placeholder outputs (e.g. frame_0123_alpha.png)
+- Log all inputs and track task flow through mesh simulation
+- Benchmark "empty render" I/O and validate routing logic
+- Phase 3 scoped during this window based on packet behavior
+
+### 🔺 Phase 3 – Native Android Renderer (Alpha)
+🕒 TBD – scoped after Phase 2 validation
+“Now that I understand the jobs—let me draw one.”
+- Begins with alpha or Z-depth image output (low complexity)
+- Renderer receives validated packets and sandboxed job assets
+- Focus on frame-specific loading, isolated rendering, and stable output
+
+### 🧱 Phase 4 – Render Mesh Stability & Packaging
+🕒 6+ weeks post-Phase 3
+- Improve render output (color channels, composite passes)
+- Expand support across Android versions and hardware types
+- Add output packaging, retry/caching support, and asset bundling
+- Begin recruiting early testers for limited release
+
+### 🧮 Timeline Summary
+
+| Phase   | Purpose                                 | Timeline      |
+|---------|-----------------------------------------|---------------|
+| Phase 1 | Scene ingestion + job packet generation | ~6 weeks      |
+| Phase 2 | Simulated render + routing validation   | ~6 weeks      |
+| Phase 3 | First real renders from real jobs       | ~6+ weeks     |
+| Phase 4 | Output stability + test node support    | ~6 weeks      |
+| Buffer  | Triage + integration & onboarding       | ~1–2 weeks    |
+
+🎯 **Target: Week 26 – Invite a small test mesh of collaborators with stable packet routing and first-stage output.**
+
+### 🧪 Experimental Features
+- Adaptive load balancing across mixed Android hardware
+- Offline-first mesh coordination with no central server
+- Thermal- and power-aware task scheduling
+- Minimalist dashboard or CLI tool for real-time task tracking
+- Encrypted asset transfer and secure result return
+
+### 🧭 Future Expansion
+DIRF – Distributed iOS Render Farm
+- Native Swift implementation inspired by the DARF architecture
+- No code porting—clean, iOS-native builds encouraged
+- Shared task structure and communication protocol with DARF
+PC App Integration Kits
+- Tools and scripts to export DARF-ready jobs from supported desktop apps
+- Blender integration first, then expansion to FFmpeg, AE, Resolve, and others
+DARF-Control
+- Optional lightweight dashboard (desktop or mobile)
+- Local-first, offline-capable task monitoring and coordination interface
+
+🚫 Not Planned (By Design)
+- Cross-platform emulation or abstraction layers
+- Full-featured GUI pipelines aimed at end users
