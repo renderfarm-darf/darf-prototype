@@ -9,7 +9,8 @@ DARF is:
 📱 **Android-first and native** – no Linux layers or emulators; built directly for Android hardware  
 🖥️ **PC-coordinated** – render jobs are created and dispatched from desktop apps  
 🛠️ **Renderer-agnostic** – supports any CLI-based renderer (e.g., Blender, FFmpeg, others)  
-🔌 **Network-agnostic** – works offline over USB or LAN; no internet required
+🔌 Flexible networking – designed for offline rendering via LAN or USB, with future support for cloud-based input/output workflows
+
 
 ## 🚧 Current Focus
 
