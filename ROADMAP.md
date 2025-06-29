@@ -29,13 +29,12 @@ DARF is renderer-agnostic: it simply executes jobs passed to it by a host-side d
 
 ## 🔜 Near-Term Goals
 
-- Define minimal task packet structure (input, output, render command)
-- Build CLI tool or Python wrapper to generate task batches from Blender
-- Android node app: accept task, validate input, execute, return result
-- Host-side dispatcher to coordinate multiple Android nodes
-- Basic retry logic and task caching for interrupted jobs
-- Enable GitHub Discussions for community feedback
-
+- Define a minimal task packet format (input paths, output targets, render commands)
+- Build a CLI tool or Python wrapper to batch Blender frame jobs
+- Develop Android node app to accept tasks, validate input, execute renders, and return results
+- Implement host-side dispatcher to coordinate jobs across multiple Android devices
+- Add basic retry logic and asset caching for incomplete or interrupted jobs
+- Enable GitHub Discussions to invite feedback and community contributions
 ---
 
 ## 🧪 Experimental Features
