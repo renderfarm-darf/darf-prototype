@@ -14,17 +14,16 @@ DARF (Distributed Android Render Farm) is a native Android-first framework conce
 
 ---
 
-## 🔧 Initial Integration Targets (PC-Side Apps)
+## 🔧 Initial Integration Targets (PC-Side Apps)  
+DARF is designed to accept render jobs from desktop applications via CLI or scriptable export mechanisms. Current and planned integrations include:
 
-DARF is designed to accept render jobs from desktop applications via CLI or scriptable export. Current and planned integrations include:
+- **Blender** – initial proof-of-concept  
+- **FFmpeg** – for transcoding, compositing, and batch video processing  
+- **After Effects** – via render queue export workflows  
+- **DaVinci Resolve** – through scriptable job export  
+- **Cinema 4D / Maya** – long-term targets, contingent on CLI-accessible job export  
 
-- **Blender** (initial proof-of-concept)
-- **FFmpeg** (video transcoding, compositing)
-- **After Effects** (via render queue export)
-- **DaVinci Resolve** (via scriptable job export)
-- **Cinema 4D / Maya** (long-term, if CLI-accessible job export is viable)
-
-DARF is not renderer-specific—it executes jobs passed to it by a host-side dispatcher.
+DARF is renderer-agnostic: it simply executes jobs passed to it by a host-side dispatcher.
 
 ---
 
