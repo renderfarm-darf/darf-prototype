@@ -42,18 +42,11 @@ DARF is renderer-agnostic: it simply executes jobs passed to it by a host-side d
 
 DARF is staging, not sprinting. Each phase validates its part of the pipeline before handing off to the next. No guesswork. No partial builds. Just deterministic progress.
 
-### 🔹 Phase 1 – Scene Validation & Job Packet Generation  
-🕒 *5–7 weeks*  
-**“Parse only. Render nothing. Trust what's complete.”**
-
-- `.blend`-only scene ingestion  
-- Strict validation: camera, frame range, baked sims, compatible shaders  
-- Rejects invalid files silently—no patching or partials  
-- Outputs structured job packets, one per frame/pass  
-  ```json
-  {
-    "job_id": "EP01_SH04_alpha_f0123",
-    "frame": 123,
-    "task": "alpha",
-    "output": "jobs/ep01_sh04/alpha/frame_0123.png"
-  }
+### 🔹 Phase 1 – Scene Validation & Job Packet Generation
+🕒 5–7 weeks
+“Parse only. Render nothing. Trust what's complete.”
+- .blend-only scene ingestion
+- Strict validation: camera, frame range, baked sims, compatible shaders
+- Rejects invalid files silently—no patching or partials
+- Outputs structured job packets, one per frame/pass
+- No image generation or rendering—just clean packet prep
