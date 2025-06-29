@@ -1,6 +1,7 @@
 # 📍 DARF Roadmap
 
-DARF (Distributed Android Render Farm) is a native Android-first framework for distributed rendering using mobile devices. This roadmap outlines current goals, integration targets, and future expansions—including its iOS sibling, DIRF.
+DARF (Distributed Android Render Farm) is a native Android-first framework concept for distributed rendering using mobile devices. This roadmap outlines current development goals, planned integrations, and long-term expansions—including a future iOS sibling, DIRF.
+
 
 ---
 
