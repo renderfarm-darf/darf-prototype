@@ -7,10 +7,10 @@ DARF (Distributed Android Render Farm) is a native Android-first framework conce
 
 ## ✅ Current Status
 
-- Public GitHub repo with documentation and early prototype structure
-- Android-native render node design (no Linux emulation or cloud dependency)
-- Renderer-agnostic scaffolding in place
-- Public-facing mission for experimentation and developer collaboration
+- Public GitHub repository with documentation and early prototype scaffolding  
+- Native Android render node concept (no Linux emulation or cloud reliance)  
+- Renderer-agnostic architecture in place for CLI-based tools  
+- Public-facing mission centered on experimentation and developer collaboration
 
 ---
 
