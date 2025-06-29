@@ -3,14 +3,13 @@
 DARF is a conceptual framework in active development. It invites developers to shape a native, distributed rendering system for Android from the ground up—exploring hardware-level orchestration across mobile devices, offline or in the cloud.
 
 
-## ⚙️ Core Concept
-
+## ⚙️ Core Concept  
 DARF is:
 
-- 📱 **Android-first and native** – no Linux layers, no VMs
-- 🖥️ **PC-coordinated** – tasks originate from desktop apps
-- 🛠️ **Renderer-agnostic** – task runners can invoke any CLI-based renderer (e.g., Blender, FFmpeg)
-- 🔌 **Network-agnostic** – built to work offline, across LAN or USB tethered devices
+📱 **Android-first and native** – no Linux layers or emulators; built directly for Android hardware  
+🖥️ **PC-coordinated** – render jobs are created and dispatched from desktop apps  
+🛠️ **Renderer-agnostic** – supports any CLI-based renderer (e.g., Blender, FFmpeg, others)  
+🔌 **Network-agnostic** – works offline over USB or LAN; no internet required
 
 ## 🚧 Current Focus
 
