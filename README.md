@@ -23,7 +23,7 @@ Key priorities:
 - Develop lightweight Android-side agent to execute jobs and return output
 
 ## 🔭 Roadmap Highlights  
-See the full ROADMAP.md for details, but here's a quick glimpse:
+See the full [ROADMAP.md](./ROADMAP.md) for details, but here's a quick glimpse:
 
 👷 PC-driven task queue system (dispatch → Android nodes)  
 🔄 Batch render support from:  
