@@ -64,9 +64,9 @@ DARF is renderer-agnostic: it simply executes jobs passed to it by a host-side d
 
 ## 🚫 Not Planned (By Design)
 
-- Cross-platform emulation or abstraction layers
-- GUI-based rendering pipelines for end users
-- Cloud-based coordination or storage
+- Cross-platform emulation or abstraction layers  
+- Full-featured GUI pipelines aimed at end users  
+- Mandatory cloud-based coordination or storage
 
 ---
 
