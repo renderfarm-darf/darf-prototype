@@ -20,12 +20,12 @@ This is where we define that answer.
 
 | File | Purpose |
 |------|---------|
-| [`ROADMAP.md`](./docs/ROADMAP.md) | DARF’s development phases and guiding scope |
-| [`ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | System overview: controller, node flow, file I/O |
-| [`CURATOR.md`](./docs/CURATOR.md) | Project vision, contributor ethics, philosophical boundaries |
-| [`RENDER_PAYLOAD_SPEC.md`](./docs/RENDER_PAYLOAD_SPEC.md) | Frame-layer definitions & packet schema _(coming soon)_ |
-| [`NODE_BEHAVIOR.md`](./docs/NODE_BEHAVIOR.md) | What Android devices do when executing payloads _(coming soon)_ |
-| [`SCATTER_POLICY.md`](./docs/SCATTER_POLICY.md) | Logic for distributing render work _(coming soon)_ |
+| [`ROADMAP.md`](../docs/ROADMAP.md) | DARF’s development phases and guiding scope |
+| [`ARCHITECTURE.md`](../docs/ARCHITECTURE.md) | System overview: controller, node flow, file I/O |
+| [`CURATOR.md`](../docs/CURATOR.md) | Project vision, contributor ethics, philosophical boundaries |
+| [`RENDER_PAYLOAD_SPEC.md`](../docs/RENDER_PAYLOAD_SPEC.md) | Frame-layer definitions & packet schema _(coming soon)_ |
+| [`NODE_BEHAVIOR.md`](../docs/NODE_BEHAVIOR.md) | What Android devices do when executing payloads _(coming soon)_ |
+| [`SCATTER_POLICY.md`](../docs/SCATTER_POLICY.md) | Logic for distributing render work _(coming soon)_ |
 
 ---
 
@@ -44,7 +44,7 @@ If you're running Blender, Krita, or After Effects and you’ve got old phones w
 
 > “You don’t need a render farm. You need a controller and a plan.”
 
-Start by reading [`docs/ROADMAP.md`](./docs/ROADMAP.md) and [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md). DARF doesn’t hide its workings—we build them in the open.
+Start by reading [`docs/ROADMAP.md`](../docs/ROADMAP.md) and [`docs/ARCHITECTURE.md`](../docs/ARCHITECTURE.md). DARF doesn’t hide its workings—we build them in the open.
 
 ---
 
