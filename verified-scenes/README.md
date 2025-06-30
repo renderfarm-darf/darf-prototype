@@ -10,11 +10,10 @@ Welcome to the framework that turns dormant devices into distributed render hors
 
 ## 🧭 Start Here
 The journey begins with logic—not rendering.  
-👉 [docs/ROADMAP.md](./docs/ROADMAP.md)
-
+👉 [`docs/ROADMAP.md`](../docs/ROADMAP.md)
 Need to understand the how and why behind the system?  
-📚 [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)  
-🧱 [docs/CURATOR.md](./docs/CURATOR.md)
+📚 [`docs/ARCHITECTURE.md`](../docs/ARCHITECTURE.md)  
+🧱 [`docs/CURATOR.md`](../docs/CURATOR.md)
 
 ---
 
