@@ -2,7 +2,7 @@
 _DARF Node Installation & Policy Enforcement Guide_
 
 **Policy Version**: 1.0  
-_Last updated: July 2025_
+_Last updated: June 29, 2025_
 
 ---
 
