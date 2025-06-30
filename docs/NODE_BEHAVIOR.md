@@ -1,4 +1,4 @@
-# 🧠 NODE_BEHAVIOR.md  
+# 🧠 NODE_BEHAVIOR 
 _DARF Node Runtime Behavior Specification_
 
 **Behavior Version**: 1.0  
