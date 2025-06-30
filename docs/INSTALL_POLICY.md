@@ -1,4 +1,4 @@
-# 🛠️ INSTALL_POLICY.md  
+# 🛠️ INSTALL_POLICY  
 _DARF Node Installation & Policy Enforcement Guide_
 
 **Policy Version**: 1.0  
